@@ -17,6 +17,9 @@ namespace SEFriendlyMVC.Web.Controllers {
 
         public ActionResult Section(string type) {
 
+            if(string.IsNullOrEmpty(type))
+                return HttpNotFound();
+
             var repo = new SectionRepo();
             var model = repo.GetAll().Where(x => x.ToLower() == type.ToLower());
 

@@ -24,7 +24,7 @@ namespace SEFriendlyMVC.Web
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{type}", // URL with parameters
-                new { controller = "Home", action = "Index", type = "Article" } // Parameter defaults
+                new { controller = "Home", action = "Index", type = UrlParameter.Optional } // Parameter defaults
             );
 
         }
